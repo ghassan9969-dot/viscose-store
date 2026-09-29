@@ -197,60 +197,14 @@ input:focus-visible {
 
 .monogram {
   width: 170px;
-  aspect-ratio: 1;
-  position: relative;
-  display: grid;
-  place-items: center;
-  color: var(--plum);
-  font-family: 'Cormorant Garamond', serif;
-  line-height: .7;
-}
-
-.monogram-v,
-.monogram-d {
-  position: absolute;
-  font-size: 8rem;
-  font-weight: 600;
-}
-
-.monogram-v {
-  transform: translate(-22px, -15px);
-}
-
-.monogram-d {
-  transform: translate(25px, 26px) rotate(180deg);
-  opacity: .9;
-}
-
-.monogram-name {
-  position: absolute;
-  z-index: 2;
-  padding: 7px 12px;
-  background: rgba(212, 181, 66, .85);
-  color: var(--plum-deep);
-  font-family: 'Inter', sans-serif;
-  font-size: .62rem;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  line-height: 1;
+  height: 170px;
+  display: block;
+  object-fit: contain;
 }
 
 .monogram--compact {
-  width: 34px;
-  height: 34px;
-}
-
-.monogram--compact .monogram-v,
-.monogram--compact .monogram-d {
-  font-size: 1.65rem;
-}
-
-.monogram--compact .monogram-v {
-  transform: translate(-5px, -3px);
-}
-
-.monogram--compact .monogram-d {
-  transform: translate(5px, 5px) rotate(180deg);
+  width: 42px;
+  height: 42px;
 }
 
 .hero {
@@ -478,12 +432,9 @@ h2 {
 }
 
 .hero-logo .monogram {
-  color: #f0d75f;
-}
-
-.hero-logo .monogram-name {
-  background: rgba(246, 238, 219, .92);
-  color: var(--plum-deep);
+  width: 220px;
+  height: 220px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .16);
 }
 
 .hero-code {
@@ -796,29 +747,11 @@ h2 {
   overflow: hidden;
 }
 
-.about-mark span {
-  position: absolute;
-  color: var(--plum);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17rem;
-  font-weight: 600;
-  line-height: .6;
-}
-
-.about-mark span:first-child {
-  transform: translate(-55px, -80px);
-}
-
-.about-mark span:last-child {
-  transform: translate(55px, 75px) rotate(180deg);
-  opacity: .85;
-}
-
-.about-mark i {
-  width: 370px;
-  height: 370px;
-  border: 1px solid rgba(51,16,95,.25);
-  border-radius: 50%;
+.about-logo {
+  width: min(78%, 430px);
+  height: auto;
+  display: block;
+  box-shadow: 0 24px 60px rgba(51, 16, 95, .08);
 }
 
 .about-copy {
@@ -1358,7 +1291,8 @@ legend,
   }
 
   .hero-logo .monogram {
-    width: 140px;
+    width: 150px;
+    height: 150px;
   }
 
   .hero-fabric {
