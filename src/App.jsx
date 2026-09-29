@@ -112,14 +112,15 @@ const products = [
 ]
 
 const standardSizes = ['50', '52', '54', '56', '57']
+const LOGO_URL = `${import.meta.env.BASE_URL}viscose-logo.webp`
 
 function Monogram({ compact = false }) {
   return (
-    <div className={`monogram ${compact ? 'monogram--compact' : ''}`} aria-label="Viscose Design">
-      <span className="monogram-v">V</span>
-      <span className="monogram-d">D</span>
-      {!compact && <span className="monogram-name">Viscose Design</span>}
-    </div>
+    <img
+      className={`monogram ${compact ? 'monogram--compact' : ''}`}
+      src={LOGO_URL}
+      alt="Viscose Design"
+    />
   )
 }
 
@@ -384,10 +385,8 @@ function App() {
         </section>
 
         <section className="section about" id="about">
-          <div className="about-mark" aria-hidden="true">
-            <span>V</span>
-            <i />
-            <span>D</span>
+          <div className="about-mark">
+            <img className="about-logo" src={LOGO_URL} alt="Viscose Design" />
           </div>
 
           <div className="about-copy">
