@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import LOGO_DATA_URL from './logoData'
 
 const WHATSAPP_NUMBER = '96892708027'
 const INSTAGRAM_URL = 'https://www.instagram.com/viscose_design'
@@ -112,7 +113,7 @@ const products = [
 ]
 
 const standardSizes = ['50', '52', '54', '56', '57']
-const LOGO_URL = `${import.meta.env.BASE_URL}viscose-logo.webp`
+const LOGO_URL = LOGO_DATA_URL
 
 function Monogram({ compact = false }) {
   return (
