@@ -3,39 +3,68 @@ import LOGO_DATA_URL from './logoData'
 
 const WHATSAPP_NUMBER = '96892708027'
 const INSTAGRAM_URL = 'https://www.instagram.com/viscose_design'
+const LOGO_URL = LOGO_DATA_URL
+const standardSizes = ['50', '52', '54', '56', '57']
+
+const products = [
+  { code: 'A1', category: 'occasion', tone: 'plum' },
+  { code: 'A2', category: 'occasion', tone: 'gold' },
+  { code: 'B1', category: 'occasion', tone: 'sand' },
+  { code: 'B2', category: 'everyday', tone: 'ivory' },
+]
 
 const copy = {
   ar: {
-    nav: ['الرئيسية', 'الجديد', 'المجموعات', 'عن فسكوز', 'تواصل'],
-    heroEyebrow: 'مخاوير بتفاصيل تليق بذوقك',
-    heroTitle: 'أناقة هادئة، بتفاصيل لا تُنسى.',
-    heroText:
-      'مخاوير مطوّرة بأقمشة مختارة بعناية، تجمع بين الأصالة والأناقة والإتقان.',
+    nav: ['الرئيسية', 'الجديد', 'المجموعات', 'عن فسكوز', 'الأقمشة', 'تواصل'],
+    announcement: 'طلبات مخصصة بالألوان والمقاسات',
+    heroEyebrow: 'أكثر من مجرد قماش',
+    heroTitle: 'الجودة تبدأ من أدق التفاصيل.',
+    heroText: 'في فسكوز نصنع مخاوير مطوّرة بأقمشة مختارة بعناية، تجمع بين الأصالة والأناقة والإتقان.',
     explore: 'اكتشفي المجموعة',
-    whatsapp: 'اطلبي عبر واتساب',
+    aboutCta: 'عن فسكوز',
     newEyebrow: 'وصل حديثًا',
     newTitle: 'أحدث التصاميم',
+    newText: 'أربع تصاميم أولية، وصور المنتجات والأسعار ستُضاف عند تجهيزها.',
     priceSoon: 'السعر يُضاف قريبًا',
     occasion: 'مناسبات',
     everyday: 'يومي',
     collectionsEyebrow: 'اختاري أسلوبك',
     collectionsTitle: 'المجموعات',
     occasionTitle: 'مخاوير المناسبات',
-    occasionText: 'تفاصيل أغنى وحضور أنيق للمناسبات واللحظات الخاصة.',
-    everydayTitle: 'مخاوير يومية',
-    everydayText: 'أناقة مريحة وخفيفة تناسب يومك وتفاصيله.',
+    occasionText: 'A1 · A2 · B1 — تفاصيل أغنى وحضور أنيق للحظات الخاصة.',
+    everydayTitle: 'المخاوير اليومية',
+    everydayText: 'B2 — أناقة خفيفة ومريحة تناسب تفاصيل يومك.',
     viewCollection: 'عرض المجموعة',
-    aboutEyebrow: 'فسكوز',
-    aboutTitle: 'الجودة تبدأ من أدق التفاصيل.',
-    aboutText:
-      'في فسكوز نؤمن بأن الجودة تبدأ من أدق التفاصيل. نصنع مخاوير مطوّرة بأقمشة مختارة بعناية، تجمع بين الأصالة والأناقة والإتقان؛ لنقدم لك قطعًا تليق بذوقك.',
-    quality: 'تفاصيل مدروسة',
-    fabric: 'أقمشة مختارة',
-    custom: 'حسب ذوقك',
-    contactEyebrow: 'نحن قريبون منك',
-    contactTitle: 'اختاري تصميمك، واتركي الباقي علينا.',
-    contactText:
-      'اختاري المنتج والمقاس واللون، ثم أرسلي الطلب كاملًا عبر واتساب.',
+    aboutEyebrow: 'قصة فسكوز',
+    aboutTitle: 'أناقة هادئة، وهوية تُرى في التفاصيل.',
+    aboutText: 'في فسكوز نؤمن بأن الجودة تبدأ من أدق التفاصيل. نصنع مخاوير مطوّرة بأقمشة مختارة بعناية، تجمع بين الأصالة والأناقة والإتقان؛ لنقدم لك قطعًا تليق بذوقك.',
+    fabricEyebrow: 'ملمس وهوية',
+    fabricTitle: 'أقمشة مختارة بعناية.',
+    fabricText: 'القماش ليس خلفية للتصميم؛ هو جزء من الشخصية. لذلك نحافظ على إحساس هادئ وفاخر في اللون والملمس والتفاصيل.',
+    fabricCards: [
+      ['اختيار دقيق', 'خامات مختارة لتوازن الراحة مع المظهر الراقي.'],
+      ['تفاصيل محسوبة', 'نهتم باللمسات الصغيرة التي تصنع الفرق عند ارتداء القطعة.'],
+      ['لونك أنتِ', 'الألوان قابلة للتغيير حسب الطلب لتناسب ذوقك.'],
+    ],
+    whyEyebrow: 'لماذا فسكوز؟',
+    whyTitle: 'مصمم ليتكيّف مع ذوقك.',
+    whyItems: [
+      ['01', 'ألوان حسب الطلب', 'اختاري اللون الذي يناسبك بدل التقيد بمجموعة ثابتة.'],
+      ['02', 'مقاسات مرنة', '50، 52، 54، 56، 57 مع إمكانية إدخال مقاس خاص.'],
+      ['03', 'مناسبات ويومي', 'مجموعتان واضحتان لتسهيل الوصول إلى التصميم المناسب.'],
+      ['04', 'طلب مباشر', 'كل تفاصيل الطلب تنتقل إلى واتساب برسالة واحدة جاهزة.'],
+    ],
+    orderEyebrow: 'تجربة طلب بسيطة',
+    orderTitle: 'اختاري. خصّصي. أرسلي.',
+    orderSteps: [
+      ['01', 'اختاري التصميم', 'اختاري A1 أو A2 أو B1 أو B2.'],
+      ['02', 'حددي المقاس واللون', 'اختاري المقاس المعتاد أو مقاسًا خاصًا واكتبي اللون المطلوب.'],
+      ['03', 'أرسلي عبر واتساب', 'يُجهّز الموقع رسالة الطلب تلقائيًا لتكمليها مع المتجر.'],
+    ],
+    orderButton: 'ابدئي الطلب',
+    instagramEyebrow: 'تابعينا',
+    instagramTitle: '@viscose_design',
+    instagramText: 'قريبًا نضيف صور التصاميم واللقطات الجديدة هنا مباشرة من هوية المتجر.',
     instagram: 'إنستغرام',
     selectProduct: 'اختيار المنتج',
     size: 'المقاس',
@@ -48,43 +77,63 @@ const copy = {
     emptyBag: 'لم تضيفي أي منتج بعد.',
     quantity: 'الكمية',
     remove: 'حذف',
-    sendOrder: 'إرسال الطلب عبر واتساب',
-    orderNote: 'سيتم تأكيد السعر والتفاصيل مع المتجر عبر واتساب.',
+    sendOrder: 'Order via WhatsApp',
+    orderNote: 'سيتم تأكيد السعر والتوفر والتفاصيل النهائية مع المتجر عبر واتساب.',
     close: 'إغلاق',
     language: 'EN',
     footer: 'Viscose Design — Muscat, Oman',
   },
   en: {
-    nav: ['Home', 'New', 'Collections', 'About', 'Contact'],
-    heroEyebrow: 'Mukhawars made with intention',
-    heroTitle: 'Quiet elegance. Details that stay with you.',
-    heroText:
-      'Elevated mukhawars made from carefully selected fabrics, balancing heritage, elegance and craft.',
+    nav: ['Home', 'New', 'Collections', 'About', 'Fabrics', 'Contact'],
+    announcement: 'Custom colors & sizing available',
+    heroEyebrow: 'More than fabric',
+    heroTitle: 'Quality begins in the smallest details.',
+    heroText: 'Viscose creates elevated mukhawars from carefully selected fabrics, balancing heritage, elegance and craftsmanship.',
     explore: 'Explore collection',
-    whatsapp: 'Order via WhatsApp',
+    aboutCta: 'About Viscose',
     newEyebrow: 'Just arrived',
     newTitle: 'New designs',
+    newText: 'Four initial designs. Final product photography and prices will be added when ready.',
     priceSoon: 'Price coming soon',
     occasion: 'Occasion',
     everyday: 'Everyday',
     collectionsEyebrow: 'Choose your mood',
     collectionsTitle: 'Collections',
     occasionTitle: 'Occasion Mukhawars',
-    occasionText: 'Richer detailing and an elegant presence for special moments.',
+    occasionText: 'A1 · A2 · B1 — richer details for special moments.',
     everydayTitle: 'Everyday Mukhawars',
-    everydayText: 'Light, comfortable elegance designed for everyday wear.',
+    everydayText: 'B2 — light, comfortable elegance for everyday wear.',
     viewCollection: 'View collection',
-    aboutEyebrow: 'Viscose',
-    aboutTitle: 'Quality begins in the smallest details.',
-    aboutText:
-      'At Viscose, we believe quality begins in the smallest details. We create elevated mukhawars using carefully selected fabrics that bring together heritage, elegance and craftsmanship.',
-    quality: 'Considered details',
-    fabric: 'Selected fabrics',
-    custom: 'Made your way',
-    contactEyebrow: 'Stay close',
-    contactTitle: 'Choose your design. We will handle the rest.',
-    contactText:
-      'Select your product, size and preferred color, then send the complete order through WhatsApp.',
+    aboutEyebrow: 'The Viscose story',
+    aboutTitle: 'Quiet elegance, shaped by detail.',
+    aboutText: 'At Viscose, we believe quality begins in the smallest details. We create elevated mukhawars using carefully selected fabrics that bring together heritage, elegance and craftsmanship.',
+    fabricEyebrow: 'Texture & identity',
+    fabricTitle: 'Fabrics chosen with intention.',
+    fabricText: 'Fabric is not simply a backdrop to the design. It carries the personality of the piece, so every visual choice stays calm, tactile and refined.',
+    fabricCards: [
+      ['Careful selection', 'Materials chosen to balance comfort and a refined appearance.'],
+      ['Considered details', 'Small finishing choices make the difference in every piece.'],
+      ['Your color', 'Colors can be changed on request to suit your taste.'],
+    ],
+    whyEyebrow: 'Why Viscose?',
+    whyTitle: 'Designed around your preference.',
+    whyItems: [
+      ['01', 'Colors on request', 'Choose the color that suits you instead of a fixed palette.'],
+      ['02', 'Flexible sizing', '50, 52, 54, 56, 57 plus a custom-size option.'],
+      ['03', 'Occasion & everyday', 'Two clear collections make choosing easier.'],
+      ['04', 'Direct ordering', 'Your full order is prepared into one WhatsApp message.'],
+    ],
+    orderEyebrow: 'A simple ordering flow',
+    orderTitle: 'Choose. Customize. Send.',
+    orderSteps: [
+      ['01', 'Choose a design', 'Select A1, A2, B1 or B2.'],
+      ['02', 'Set size & color', 'Choose a standard or custom size and add your preferred color.'],
+      ['03', 'Send on WhatsApp', 'The site prepares the order message for you automatically.'],
+    ],
+    orderButton: 'Start an order',
+    instagramEyebrow: 'Follow along',
+    instagramTitle: '@viscose_design',
+    instagramText: 'Product photography and new releases can be added here as the store content grows.',
     instagram: 'Instagram',
     selectProduct: 'Select product',
     size: 'Size',
@@ -98,27 +147,17 @@ const copy = {
     quantity: 'Quantity',
     remove: 'Remove',
     sendOrder: 'Order via WhatsApp',
-    orderNote: 'Price and final details will be confirmed with the store on WhatsApp.',
+    orderNote: 'Price, availability and final details will be confirmed with the store on WhatsApp.',
     close: 'Close',
     language: 'عربي',
     footer: 'Viscose Design — Muscat, Oman',
   },
 }
 
-const products = [
-  { code: 'A1', category: 'occasion', tone: 'plum', new: true },
-  { code: 'A2', category: 'occasion', tone: 'gold', new: true },
-  { code: 'B1', category: 'occasion', tone: 'sand', new: true },
-  { code: 'B2', category: 'everyday', tone: 'ivory', new: true },
-]
-
-const standardSizes = ['50', '52', '54', '56', '57']
-const LOGO_URL = LOGO_DATA_URL
-
-function Monogram({ compact = false }) {
+function Logo({ compact = false, dimensional = false }) {
   return (
     <img
-      className={`monogram ${compact ? 'monogram--compact' : ''}`}
+      className={`brand-logo ${compact ? 'brand-logo--compact' : ''} ${dimensional ? 'brand-logo--3d' : ''}`}
       src={LOGO_URL}
       alt="Viscose Design"
     />
@@ -136,11 +175,7 @@ function App() {
 
   const t = copy[lang]
   const rtl = lang === 'ar'
-
-  const cartCount = useMemo(
-    () => cart.reduce((sum, item) => sum + item.quantity, 0),
-    [cart],
-  )
+  const cartCount = useMemo(() => cart.reduce((sum, item) => sum + item.quantity, 0), [cart])
 
   const selectProduct = (product) => {
     setActiveProduct(product)
@@ -158,22 +193,9 @@ function App() {
     setCart((current) => {
       const existing = current.find((item) => item.key === key)
       if (existing) {
-        return current.map((item) =>
-          item.key === key ? { ...item, quantity: item.quantity + 1 } : item,
-        )
+        return current.map((item) => item.key === key ? { ...item, quantity: item.quantity + 1 } : item)
       }
-
-      return [
-        ...current,
-        {
-          key,
-          code: activeProduct.code,
-          category: activeProduct.category,
-          size: chosenSize,
-          color: chosenColor,
-          quantity: 1,
-        },
-      ]
+      return [...current, { key, code: activeProduct.code, category: activeProduct.category, size: chosenSize, color: chosenColor, quantity: 1 }]
     })
 
     setActiveProduct(null)
@@ -181,20 +203,12 @@ function App() {
   }
 
   const changeQuantity = (key, amount) => {
-    setCart((current) =>
-      current
-        .map((item) =>
-          item.key === key
-            ? { ...item, quantity: Math.max(0, item.quantity + amount) }
-            : item,
-        )
-        .filter((item) => item.quantity > 0),
-    )
+    setCart((current) => current
+      .map((item) => item.key === key ? { ...item, quantity: Math.max(0, item.quantity + amount) } : item)
+      .filter((item) => item.quantity > 0))
   }
 
-  const removeItem = (key) => {
-    setCart((current) => current.filter((item) => item.key !== key))
-  }
+  const removeItem = (key) => setCart((current) => current.filter((item) => item.key !== key))
 
   const whatsappUrl = useMemo(() => {
     const greeting = rtl
@@ -202,65 +216,49 @@ function App() {
       : 'Hello, I would like to order the following from Viscose Design:'
 
     const lines = cart.map((item, index) => {
-      const category =
-        item.category === 'occasion'
-          ? rtl
-            ? 'مناسبات'
-            : 'Occasion'
-          : rtl
-            ? 'يومي'
-            : 'Everyday'
-
+      const category = item.category === 'occasion' ? (rtl ? 'مناسبات' : 'Occasion') : (rtl ? 'يومي' : 'Everyday')
       return rtl
         ? `${index + 1}. المنتج ${item.code} — ${category}\nالمقاس: ${item.size}\nاللون: ${item.color}\nالكمية: ${item.quantity}`
         : `${index + 1}. Product ${item.code} — ${category}\nSize: ${item.size}\nColor: ${item.color}\nQuantity: ${item.quantity}`
     })
 
-    const ending = rtl
-      ? 'يرجى تأكيد السعر والتوفر. شكرًا.'
-      : 'Please confirm price and availability. Thank you.'
-
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      [greeting, '', ...lines, '', ending].join('\n'),
-    )}`
+    const ending = rtl ? 'يرجى تأكيد السعر والتوفر. شكرًا.' : 'Please confirm price and availability. Thank you.'
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent([greeting, '', ...lines, '', ending].join('\n'))}`
   }, [cart, rtl])
 
   const scrollToCategory = (category) => {
-    const firstProduct = document.querySelector(`[data-category="${category}"]`)
-    firstProduct?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    document.querySelector(`[data-category="${category}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
   return (
     <div className={`app ${rtl ? 'rtl' : 'ltr'}`} dir={rtl ? 'rtl' : 'ltr'}>
       <div className="announcement">
-        <span>{rtl ? 'طلبات مخصصة بالألوان والمقاسات' : 'Custom colors & sizing available'}</span>
+        <span>{t.announcement}</span>
         <span className="announcement-dot" />
         <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">@viscose_design</a>
       </div>
 
       <header className="site-header" id="home">
-        <a className="brand-link" href="#home" aria-label="Viscose Design home">
-          <Monogram compact />
-          <span>Viscose Design</span>
-        </a>
+        <div className="header-actions">
+          <button className="language-button" type="button" onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}>{t.language}</button>
+          <button className="bag-button" type="button" onClick={() => setCartOpen(true)} aria-label={t.bag}>
+            <span>{t.bag}</span><b>{cartCount}</b>
+          </button>
+        </div>
 
         <nav className="nav" aria-label="Primary navigation">
           <a href="#home">{t.nav[0]}</a>
           <a href="#new-arrivals">{t.nav[1]}</a>
           <a href="#collections">{t.nav[2]}</a>
           <a href="#about">{t.nav[3]}</a>
-          <a href="#contact">{t.nav[4]}</a>
+          <a href="#fabrics">{t.nav[4]}</a>
+          <a href="#contact">{t.nav[5]}</a>
         </nav>
 
-        <div className="header-actions">
-          <button className="language-button" type="button" onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}>
-            {t.language}
-          </button>
-          <button className="bag-button" type="button" onClick={() => setCartOpen(true)} aria-label={t.bag}>
-            <span>{t.bag}</span>
-            <b>{cartCount}</b>
-          </button>
-        </div>
+        <a className="brand-link" href="#home" aria-label="Viscose Design home">
+          <span>Viscose Design</span>
+          <Logo compact />
+        </a>
       </header>
 
       <main>
@@ -271,76 +269,52 @@ function App() {
             <p className="hero-text">{t.heroText}</p>
             <div className="hero-actions">
               <a className="button button--primary" href="#collections">{t.explore}</a>
-              <a
-                className="button button--ghost"
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t.instagram}
-              </a>
+              <a className="button button--ghost" href="#about">{t.aboutCta}</a>
             </div>
+            <div className="hero-index"><span>01</span><i /><span>03</span></div>
           </div>
 
           <div className="hero-art" aria-hidden="true">
-            <div className="hero-orbit hero-orbit--one" />
-            <div className="hero-orbit hero-orbit--two" />
-            <div className="hero-fabric hero-fabric--back" />
-            <div className="hero-fabric hero-fabric--front" />
-            <div className="hero-logo">
-              <Monogram />
-            </div>
-            <span className="hero-code">VD · 2026</span>
+            <div className="fabric fabric--ivory-one" />
+            <div className="fabric fabric--gold" />
+            <div className="fabric fabric--plum" />
+            <div className="fabric fabric--ivory-two" />
+            <div className="hero-logo-shell"><Logo dimensional /></div>
           </div>
         </section>
 
         <section className="trust-strip" aria-label="Brand values">
-          <span>{t.quality}</span>
-          <i />
-          <span>{t.fabric}</span>
-          <i />
-          <span>{t.custom}</span>
+          <span>{rtl ? 'أقمشة مختارة' : 'Selected fabrics'}</span><i />
+          <span>{rtl ? 'تفاصيل مدروسة' : 'Considered details'}</span><i />
+          <span>{rtl ? 'حسب ذوقك' : 'Made your way'}</span>
         </section>
 
-        <section className="section" id="new-arrivals">
+        <section className="section new-arrivals" id="new-arrivals">
           <div className="section-heading split-heading">
             <div>
               <p className="eyebrow">{t.newEyebrow}</p>
               <h2>{t.newTitle}</h2>
+              <p className="section-intro">{t.newText}</p>
             </div>
             <span className="section-number">01 — 04</span>
           </div>
 
           <div className="product-grid">
             {products.map((product, index) => (
-              <article
-                className="product-card"
-                key={product.code}
-                data-category={product.category}
-              >
-                <button
-                  className={`product-visual product-visual--${product.tone}`}
-                  type="button"
-                  onClick={() => selectProduct(product)}
-                  aria-label={`${t.selectProduct} ${product.code}`}
-                >
+              <article className="product-card" key={product.code} data-category={product.category}>
+                <button className={`product-visual product-visual--${product.tone}`} type="button" onClick={() => selectProduct(product)}>
                   <span className="product-index">0{index + 1}</span>
                   <span className="product-code">{product.code}</span>
-                  <span className="product-thread product-thread--a" />
-                  <span className="product-thread product-thread--b" />
+                  <span className="product-fold product-fold--one" />
+                  <span className="product-fold product-fold--two" />
                   <span className="product-watermark">V</span>
                 </button>
-
                 <div className="product-meta">
                   <div>
-                    <p>
-                      {product.category === 'occasion' ? t.occasion : t.everyday}
-                    </p>
+                    <p>{product.category === 'occasion' ? t.occasion : t.everyday}</p>
                     <h3>{product.code}</h3>
                   </div>
-                  <button type="button" className="round-arrow" onClick={() => selectProduct(product)}>
-                    ↗
-                  </button>
+                  <button type="button" className="round-arrow" onClick={() => selectProduct(product)} aria-label={`${t.selectProduct} ${product.code}`}>↗</button>
                 </div>
                 <span className="price-placeholder">{t.priceSoon}</span>
               </article>
@@ -353,43 +327,26 @@ function App() {
             <p className="eyebrow">{t.collectionsEyebrow}</p>
             <h2>{t.collectionsTitle}</h2>
           </div>
-
           <div className="collection-grid">
-            <button
-              className="collection-card collection-card--occasion"
-              type="button"
-              onClick={() => scrollToCategory('occasion')}
-            >
+            <button className="collection-card collection-card--occasion" type="button" onClick={() => scrollToCategory('occasion')}>
               <span className="collection-no">01</span>
-              <div>
-                <p>Viscose Design</p>
-                <h3>{t.occasionTitle}</h3>
-                <span>{t.occasionText}</span>
-              </div>
+              <div><p>Viscose Design</p><h3>{t.occasionTitle}</h3><span>{t.occasionText}</span></div>
               <b>{t.viewCollection} ↗</b>
             </button>
-
-            <button
-              className="collection-card collection-card--everyday"
-              type="button"
-              onClick={() => scrollToCategory('everyday')}
-            >
+            <button className="collection-card collection-card--everyday" type="button" onClick={() => scrollToCategory('everyday')}>
               <span className="collection-no">02</span>
-              <div>
-                <p>Viscose Design</p>
-                <h3>{t.everydayTitle}</h3>
-                <span>{t.everydayText}</span>
-              </div>
+              <div><p>Viscose Design</p><h3>{t.everydayTitle}</h3><span>{t.everydayText}</span></div>
               <b>{t.viewCollection} ↗</b>
             </button>
           </div>
         </section>
 
         <section className="section about" id="about">
-          <div className="about-mark">
-            <img className="about-logo" src={LOGO_URL} alt="Viscose Design" />
+          <div className="about-visual">
+            <div className="about-fabric about-fabric--gold" />
+            <div className="about-fabric about-fabric--plum" />
+            <div className="about-logo-shell"><Logo dimensional /></div>
           </div>
-
           <div className="about-copy">
             <p className="eyebrow">{t.aboutEyebrow}</p>
             <h2>{t.aboutTitle}</h2>
@@ -398,29 +355,61 @@ function App() {
           </div>
         </section>
 
-        <section className="contact section" id="contact">
-          <div>
-            <p className="eyebrow">{t.contactEyebrow}</p>
-            <h2>{t.contactTitle}</h2>
-            <p>{t.contactText}</p>
+        <section className="fabric-story" id="fabrics">
+          <div className="fabric-story-copy">
+            <p className="eyebrow">{t.fabricEyebrow}</p>
+            <h2>{t.fabricTitle}</h2>
+            <p>{t.fabricText}</p>
           </div>
+          <div className="fabric-sculpture" aria-hidden="true">
+            <span className="sculpture-sheet sculpture-sheet--one" />
+            <span className="sculpture-sheet sculpture-sheet--two" />
+            <span className="sculpture-sheet sculpture-sheet--three" />
+          </div>
+          <div className="fabric-values">
+            {t.fabricCards.map(([title, text], index) => (
+              <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>
+            ))}
+          </div>
+        </section>
 
-          <div className="contact-actions">
-            <button className="button button--primary" type="button" onClick={() => setCartOpen(true)}>
-              {t.whatsapp}
-            </button>
-            <a className="button button--ghost" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
-              {t.instagram}
-            </a>
+        <section className="section why-viscose">
+          <div className="section-heading split-heading">
+            <div><p className="eyebrow">{t.whyEyebrow}</p><h2>{t.whyTitle}</h2></div>
+            <span className="section-number">VISCOSE / 04</span>
           </div>
+          <div className="why-grid">
+            {t.whyItems.map(([number, title, text]) => (
+              <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>
+            ))}
+          </div>
+        </section>
+
+        <section className="order-experience" id="contact">
+          <div className="order-heading">
+            <p className="eyebrow">{t.orderEyebrow}</p>
+            <h2>{t.orderTitle}</h2>
+          </div>
+          <div className="order-steps">
+            {t.orderSteps.map(([number, title, text]) => (
+              <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>
+            ))}
+          </div>
+          <button className="button button--light" type="button" onClick={() => setCartOpen(true)}>{t.orderButton}</button>
+        </section>
+
+        <section className="section instagram-band">
+          <div>
+            <p className="eyebrow">{t.instagramEyebrow}</p>
+            <h2>{t.instagramTitle}</h2>
+            <p>{t.instagramText}</p>
+          </div>
+          <a className="button button--ghost" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">{t.instagram} ↗</a>
         </section>
       </main>
 
       <footer>
-        <div className="footer-brand">
-          <Monogram compact />
-          <span>{t.footer}</span>
-        </div>
+        <div className="footer-brand"><Logo compact /><span>{t.footer}</span></div>
         <span>© {new Date().getFullYear()}</span>
         <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">@viscose_design</a>
       </footer>
@@ -429,116 +418,45 @@ function App() {
         <div className="modal-backdrop" role="presentation" onMouseDown={() => setActiveProduct(null)}>
           <section className="product-modal" role="dialog" aria-modal="true" onMouseDown={(event) => event.stopPropagation()}>
             <button className="modal-close" type="button" onClick={() => setActiveProduct(null)} aria-label={t.close}>×</button>
-
-            <div className={`modal-art product-visual--${activeProduct.tone}`}>
-              <span>{activeProduct.code}</span>
-              <b>Viscose Design</b>
-            </div>
-
+            <div className={`modal-art product-visual--${activeProduct.tone}`}><span>{activeProduct.code}</span><b>Viscose Design</b></div>
             <div className="modal-content">
-              <p className="eyebrow">
-                {activeProduct.category === 'occasion' ? t.occasion : t.everyday}
-              </p>
+              <p className="eyebrow">{activeProduct.category === 'occasion' ? t.occasion : t.everyday}</p>
               <h2>{activeProduct.code}</h2>
               <span className="modal-price">{t.priceSoon}</span>
-
               <fieldset>
                 <legend>{t.size}</legend>
                 <div className="size-grid">
-                  {standardSizes.map((item) => (
-                    <button
-                      className={size === item ? 'selected' : ''}
-                      type="button"
-                      key={item}
-                      onClick={() => setSize(item)}
-                    >
-                      {item}
-                    </button>
-                  ))}
-                  <button
-                    className={size === 'custom' ? 'selected' : ''}
-                    type="button"
-                    onClick={() => setSize('custom')}
-                  >
-                    {t.customSize}
-                  </button>
+                  {standardSizes.map((item) => <button className={size === item ? 'selected' : ''} type="button" key={item} onClick={() => setSize(item)}>{item}</button>)}
+                  <button className={size === 'custom' ? 'selected' : ''} type="button" onClick={() => setSize('custom')}>{t.customSize}</button>
                 </div>
               </fieldset>
-
               {size === 'custom' && (
-                <label className="field">
-                  <span>{t.customSize}</span>
-                  <input
-                    value={customSize}
-                    onChange={(event) => setCustomSize(event.target.value)}
-                    placeholder={t.customSizePlaceholder}
-                  />
-                </label>
+                <label className="field"><span>{t.customSize}</span><input value={customSize} onChange={(event) => setCustomSize(event.target.value)} placeholder={t.customSizePlaceholder} /></label>
               )}
-
-              <label className="field">
-                <span>{t.color}</span>
-                <input
-                  value={color}
-                  onChange={(event) => setColor(event.target.value)}
-                  placeholder={t.colorPlaceholder}
-                />
-              </label>
-
-              <button className="button button--primary button--full" type="button" onClick={addToCart}>
-                {t.addToBag}
-              </button>
+              <label className="field"><span>{t.color}</span><input value={color} onChange={(event) => setColor(event.target.value)} placeholder={t.colorPlaceholder} /></label>
+              <button className="button button--primary button--full" type="button" onClick={addToCart}>{t.addToBag}</button>
             </div>
           </section>
         </div>
       )}
 
       <aside className={`cart-drawer ${cartOpen ? 'cart-drawer--open' : ''}`} aria-hidden={!cartOpen}>
-        <div className="cart-header">
-          <div>
-            <p className="eyebrow">Viscose Design</p>
-            <h2>{t.bag} <sup>{cartCount}</sup></h2>
-          </div>
-          <button type="button" onClick={() => setCartOpen(false)} aria-label={t.close}>×</button>
-        </div>
-
+        <div className="cart-header"><div><p className="eyebrow">Viscose Design</p><h2>{t.bag} <sup>{cartCount}</sup></h2></div><button type="button" onClick={() => setCartOpen(false)} aria-label={t.close}>×</button></div>
         <div className="cart-body">
           {cart.length === 0 ? (
-            <div className="empty-cart">
-              <Monogram compact />
-              <p>{t.emptyBag}</p>
-              <a href="#new-arrivals" onClick={() => setCartOpen(false)}>{t.explore}</a>
-            </div>
-          ) : (
-            cart.map((item) => (
-              <article className="cart-item" key={item.key}>
-                <div className="cart-item-code">{item.code}</div>
-                <div className="cart-item-info">
-                  <strong>{item.code}</strong>
-                  <span>{t.size}: {item.size}</span>
-                  <span>{t.color}: {item.color}</span>
-                  <div className="quantity-controls">
-                    <button type="button" onClick={() => changeQuantity(item.key, -1)}>−</button>
-                    <span>{item.quantity}</span>
-                    <button type="button" onClick={() => changeQuantity(item.key, 1)}>+</button>
-                  </div>
-                  <button className="remove-button" type="button" onClick={() => removeItem(item.key)}>
-                    {t.remove}
-                  </button>
-                </div>
-              </article>
-            ))
-          )}
+            <div className="empty-cart"><Logo compact /><p>{t.emptyBag}</p><a href="#new-arrivals" onClick={() => setCartOpen(false)}>{t.explore}</a></div>
+          ) : cart.map((item) => (
+            <article className="cart-item" key={item.key}>
+              <div className="cart-item-code">{item.code}</div>
+              <div className="cart-item-info">
+                <strong>{item.code}</strong><span>{t.size}: {item.size}</span><span>{t.color}: {item.color}</span>
+                <div className="quantity-controls"><button type="button" onClick={() => changeQuantity(item.key, -1)}>−</button><span>{item.quantity}</span><button type="button" onClick={() => changeQuantity(item.key, 1)}>+</button></div>
+                <button className="remove-button" type="button" onClick={() => removeItem(item.key)}>{t.remove}</button>
+              </div>
+            </article>
+          ))}
         </div>
-
-        <div className="cart-footer">
-          <p>{t.orderNote}</p>
-          {cart.length > 0 && (
-            <a className="button button--primary button--full" href={whatsappUrl} target="_blank" rel="noreferrer">
-              {t.sendOrder}
-            </a>
-          )}
-        </div>
+        <div className="cart-footer"><p>{t.orderNote}</p>{cart.length > 0 && <a className="button button--primary button--full" href={whatsappUrl} target="_blank" rel="noreferrer">{t.sendOrder}</a>}</div>
       </aside>
 
       {cartOpen && <button className="drawer-backdrop" type="button" onClick={() => setCartOpen(false)} aria-label={t.close} />}
