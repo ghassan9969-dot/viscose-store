@@ -5,6 +5,7 @@ import './styles.css'
 import './multipage.css'
 import './responsive.css'
 import './cleanup.css'
+import './mobile-polish.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
