@@ -5,17 +5,16 @@
   background: transparent;
 }
 
-/* Header + footer: clean 2D mark inside the brand gold tile. */
+/* Header + footer: clean transparent 2D mark, no gold tile. */
 .monogram--compact {
-  width: 46px;
-  height: 46px;
-  padding: 5px;
+  width: 58px;
+  height: 58px;
+  padding: 0;
   object-fit: contain;
-  background: linear-gradient(145deg, #caaa35 0%, #b89428 100%);
-  border: 1px solid rgba(51, 16, 95, 0.12);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 8px 18px rgba(47, 32, 52, 0.08);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  filter: none;
 }
 
 /* Home hero: same artwork, presented with restrained dimensional depth. */
@@ -108,9 +107,9 @@
 
 @media (max-width: 640px) {
   .monogram--compact {
-    width: 40px;
-    height: 40px;
-    padding: 4px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
   }
 
   .hero-logo .monogram {
