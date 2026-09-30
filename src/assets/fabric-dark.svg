@@ -23,14 +23,13 @@
       <stop offset="1" stop-color="#1d0b27"/>
     </linearGradient>
     <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#000" flood-opacity="0.42"/></filter>
-    <filter id="texture"><feTurbulence type="fractalNoise" baseFrequency="0.01 0.04" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="8"/></filter>
   </defs>
   <rect width="1200" height="760" fill="url(#bg)"/>
   <g filter="url(#shadow)">
-    <path d="M-120 665 C115 520 260 535 440 610 C625 690 805 710 1325 470 L1325 830 L-120 830 Z" fill="url(#ivory)" filter="url(#texture)"/>
-    <path d="M40 -70 C310 80 410 235 390 405 C375 545 465 645 680 745 C880 835 1080 790 1335 610 L1335 -80 Z" fill="url(#plum)" filter="url(#texture)"/>
-    <path d="M600 20 C835 125 965 225 1270 490 C1020 425 820 480 655 620 C545 710 430 725 300 680 C480 585 535 445 555 300 C570 180 548 95 600 20 Z" fill="url(#gold)" filter="url(#texture)"/>
-    <path d="M-80 75 C160 60 285 135 405 270 C505 385 605 420 790 380 C625 500 485 535 355 590 C180 665 30 625 -105 530 Z" fill="url(#ivory)" opacity="0.92" filter="url(#texture)"/>
+    <path d="M-120 665 C115 520 260 535 440 610 C625 690 805 710 1325 470 L1325 830 L-120 830 Z" fill="url(#ivory)"/>
+    <path d="M40 -70 C310 80 410 235 390 405 C375 545 465 645 680 745 C880 835 1080 790 1335 610 L1335 -80 Z" fill="url(#plum)"/>
+    <path d="M600 20 C835 125 965 225 1270 490 C1020 425 820 480 655 620 C545 710 430 725 300 680 C480 585 535 445 555 300 C570 180 548 95 600 20 Z" fill="url(#gold)"/>
+    <path d="M-80 75 C160 60 285 135 405 270 C505 385 605 420 790 380 C625 500 485 535 355 590 C180 665 30 625 -105 530 Z" fill="url(#ivory)" opacity="0.92"/>
   </g>
-  <path d="M-60 680 C250 520 430 625 655 690 C865 750 1045 670 1325 520" fill="none" stroke="#f6e3af" stroke-opacity="0.55" stroke-width="3"/>
+  <path d="M-60 680 C250 520 430 625 655 690 C865 750 1045 670 1325 520" fill="none" stroke="#f6e3af" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
 </svg>
