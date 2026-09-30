@@ -1,6 +1,17 @@
 /* Final mobile pass: cart density, keyboard-friendly product modal, and footer rhythm.
    Loaded last so it only tightens the mobile experience without changing desktop. */
 
+/* Decorative artwork in the order panel must never sit in the tap layer. */
+.order-experience::after {
+  pointer-events: none;
+}
+
+.order-experience > .button {
+  position: relative;
+  z-index: 2;
+  touch-action: manipulation;
+}
+
 @media (max-width: 820px) {
   /* Keep a short cart from stretching one or two items away from the WhatsApp CTA. */
   .cart-drawer:not(:has(.empty-cart)) {
