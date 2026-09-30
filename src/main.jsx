@@ -4,6 +4,7 @@ import App from './App'
 import './styles.css'
 import './multipage.css'
 import './responsive.css'
+import './cleanup.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
