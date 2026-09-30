@@ -4,7 +4,7 @@ name: Deploy Viscose Design to GitHub Pages
 on:
   push:
     branches:
-      - initial-design
+      - main
   workflow_dispatch:
 
 permissions:
