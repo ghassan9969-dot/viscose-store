@@ -7,6 +7,7 @@ import './responsive.css'
 import './cleanup.css'
 import './mobile-polish.css'
 import './mobile-nav-compact.css'
+import './mobile-final.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
