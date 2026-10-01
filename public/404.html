@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Viscose Design</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var routes = ['home', 'new', 'collections', 'about', 'fabrics', 'contact']
+        var route = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home'
+        if (routes.indexOf(route) === -1) route = 'home'
+        var query = window.location.search || ''
+        window.location.replace('/#/' + route + query)
+      })()
+    </script>
+  </body>
+</html>
