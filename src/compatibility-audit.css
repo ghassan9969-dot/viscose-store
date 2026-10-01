@@ -30,7 +30,6 @@ body {
 
 body.viscose-overlay-open {
   overflow: hidden;
-  touch-action: none;
 }
 
 /* Runtime adds explicit state classes so important cart layout does not depend on :has(). */
